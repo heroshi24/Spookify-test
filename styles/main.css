@@ -1,0 +1,293 @@
+/* Fonts 
+font-family: 'Lora', serif;
+font-family: 'Poppins', sans-serif;
+
+*/
+
+:root {
+  --spacer: 3rem;
+  --box-shadow: 0.3rem 0.3rem 1.5rem rgb(0, 0, 0, 0.15);
+
+  --Neutral-White: #FFFAFB;
+  --Neutral-Black: #050505;
+  --Neutral-Gray: #4A4A4A;
+  --Primary: #24126A;
+  --Primary-Lighter: #3D2892;
+  --Secondary: #1AC3C3;
+  --Secondary-Lighter: #16E0E0;
+  --Accent: #F55D3A;
+
+  --h1: 6.4rem;
+  --h2: 3.2rem;
+  --h3: 2.8rem;
+  --p: 1.8rem;
+}
+
+/* Reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+p,
+html,
+body,
+figure {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  font-family: 'Lora', serif;
+}
+
+/* Utilities */
+ul[class],
+ol[class] {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.flow-content > * + * {
+  margin-top: var(--flow-spacer, var(--spacer));
+}
+/* Start Here */
+
+body {
+  margin: 2rem;
+  color: var(--Neutral-White);
+  background-image: url(../images/background.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+h1 {
+  font-size: var(--h1);
+}
+
+h2 {
+  font-size: var(--h2);
+}
+
+h3 {
+  font-size: var(--h3);
+}
+
+p {
+  font-size: var(--p);
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Navbar */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+}
+
+.logo {
+  font-size: 26px;
+  font-weight: 900;
+  filter: drop-shadow(0 0 1rem var(--Accent));
+  margin: 0rem 0rem 0rem 4rem;
+}
+
+span {
+  color: var(--Accent);
+}
+
+.navList{
+  gap: 2rem;
+  display: flex;
+  font-size: 26px;
+  font-weight: 700;
+  
+}
+
+.navbar li {
+  display: flex;  
+}
+
+.navbar a {
+  color: var(--Primary-Lighter);
+}
+
+.navbar a:hover {
+  color: var(--Accent);
+  filter: drop-shadow(0 0 1rem var(--Accent));
+}
+
+/* Hero */
+
+.hero {
+  width: 100%;
+  height: 64rem;
+  padding: 4rem 0rem;
+}
+
+.heroItems {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.heroItems img {
+  width: auto;
+  height: 24rem;
+  filter: drop-shadow(0rem 0rem 8rem var(--Accent)); 
+}
+.heroItems a{
+  border: 2px solid #F55D3A;
+  margin: 4rem;
+  justify-content: center;
+  align-self: center;
+  width: 24rem;
+  background-color: var(--Accent);
+  color: var(--Neutral-White);
+  border-radius: 20px;
+}
+.heroItems a:hover{
+  box-shadow: 0rem 0rem 2rem 2rem var(--Neutral-Black);
+  transition: 0.3s;
+}
+
+.text {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+.text a{
+  font-size: 4rem;
+}
+.imgKamatayan{
+  display: flex;
+  justify-content: center;
+}
+.imgKamatayan img{
+  border-radius: 200px;
+}
+.imgKamatayan img:hover{
+  box-shadow: 0rem 0rem 2rem 2rem var(--Neutral-Black);
+  transition: 0.3s;
+}
+.imgSign img:hover{
+  box-shadow: 0rem 0rem 2rem 2rem var(--Neutral-Gray);
+  transition: 0.3s;
+}
+
+.sentence{
+  border: 2px solid white;
+  text-align: center;
+  padding: 2rem;
+  margin: 4rem 8rem;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+}
+.imgSign{
+  display: flex;
+  justify-content: center;
+}
+.imgSign img{
+  border-radius: 200px;
+
+}
+.sentenceSenyales{
+  border: 2px solid white;
+}
+
+.stories h1{
+  text-align: center;
+  margin: 0rem 0rem 4rem 0rem;
+}
+
+.peopleContainer{
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+}
+.person figure{
+  border: 2px solid white;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ flex-direction: column;
+ backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+}
+.person figure p{
+  text-align: center;
+}
+.cntact{
+  display: flex;
+ justify-content: center;
+ align-items: center;
+ flex-direction: column;
+}
+
+@media screen and (max-width: 375px) {
+  .navbar {
+    width: 100%;
+  }
+  .navList {
+    display: none;
+  }
+  body {
+    margin: 0;
+  }
+  .logo {
+    margin: 0;
+  }
+  .hero img {
+    height: 8rem;
+  }
+  h1 {
+    font-size: calc(var(--h1) - 32px);
+  }
+  h2 {
+    font-size: calc(var(--h2) - 16px);
+  }
+  .heroItems{
+    width: 24rem;
+  }
+  .peopleContainer{
+    flex-wrap: wrap;
+    padding: 2rem;
+  }
+  .peopleContainer .person{
+    width: 24rem;
+  }
+  .sentence {
+    margin: 0;
+    width: 24rem;
+  }
+  .cntact{
+    width: 24rem;
+  }
+  .imgKamatayan img,
+  .imgSign img{
+    height: 24rem;
+    width: 24rem;
+  }
+  .stories{
+    width: 24rem;
+  }
+  .imgKamatayan,
+  .imgSign {
+    width: 24rem;
+  }
+}
